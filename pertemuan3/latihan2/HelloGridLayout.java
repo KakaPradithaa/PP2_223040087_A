@@ -5,25 +5,68 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class HelloGridLayout extends JFrame implements ActionListener {
+    private JButton buttonA;
+    private JButton buttonB;
+    private JButton buttonC;
+    private JButton buttonD;
+    private JButton buttonE;
+    private JButton buttonF;
+    private JButton buttonG;
+    private JButton buttonH;
+    private JButton buttonI;
+
     private JButton[] buttons;
     private boolean gameOver;
 
     public HelloGridLayout() {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
         gameOver = false;
 
-        // Create an array of buttons
-        buttons = new JButton[9];
-        for (int i = 0; i < 9; i++) {
-            buttons[i] = new JButton("");
-            buttons[i].addActionListener(this);
-            this.add(buttons[i]);
-        }
+        buttonA = new JButton("");
+        buttonB = new JButton("");
+        buttonC = new JButton("");
+        buttonD = new JButton("");
+        buttonE = new JButton("");
+        buttonF = new JButton("");
+        buttonG = new JButton("");
+        buttonH = new JButton("");
+        buttonI = new JButton("");
 
-        // Set the layout
+        buttons = new JButton[9];
+        buttons[0] = buttonA;
+        buttons[1] = buttonB;
+        buttons[2] = buttonC;
+        buttons[3] = buttonD;
+        buttons[4] = buttonE;
+        buttons[5] = buttonF;
+        buttons[6] = buttonG;
+        buttons[7] = buttonH;
+        buttons[8] = buttonI;
+
+        buttonA.addActionListener(this);
+        buttonB.addActionListener(this);
+        buttonC.addActionListener(this);
+        buttonD.addActionListener(this);
+        buttonE.addActionListener(this);
+        buttonF.addActionListener(this);
+        buttonG.addActionListener(this);
+        buttonH.addActionListener(this);
+        buttonI.addActionListener(this);
+
         this.setLayout(new GridLayout(3, 3));
+
+        this.add(buttonA);
+        this.add(buttonB);
+        this.add(buttonC);
+        this.add(buttonD);
+        this.add(buttonE);
+        this.add(buttonF);
+        this.add(buttonG);
+        this.add(buttonH);
+        this.add(buttonI);
+
         this.setSize(300, 300);
-        this.setVisible(true);
     }
 
     @Override
@@ -33,7 +76,6 @@ public class HelloGridLayout extends JFrame implements ActionListener {
             if (button.getText().isEmpty()) {
                 button.setText("O");
                 checkWinner();
-                
                 if (!gameOver) {
                     for (int i = 0; i < buttons.length; i++) {
                         if (buttons[i].getText().isEmpty()) {
@@ -50,52 +92,88 @@ public class HelloGridLayout extends JFrame implements ActionListener {
     private void checkWinner() {
         String winner = "";
 
-        // Rows check
-        if (!buttons[0].getText().isEmpty() && buttons[0].getText().equals(buttons[1].getText()) && buttons[0].getText().equals(buttons[2].getText())) {
-            winner = buttons[0].getText();
-            highlightButtons(0, 1, 2);
-        } else if (!buttons[3].getText().isEmpty() && buttons[3].getText().equals(buttons[4].getText()) && buttons[3].getText().equals(buttons[5].getText())) {
-            winner = buttons[3].getText();
-            highlightButtons(3, 4, 5);
-        } else if (!buttons[6].getText().isEmpty() && buttons[6].getText().equals(buttons[7].getText()) && buttons[6].getText().equals(buttons[8].getText())) {
-            winner = buttons[6].getText();
-            highlightButtons(6, 7, 8);
-        }
-        
-        // Columns check
-        else if (!buttons[0].getText().isEmpty() && buttons[0].getText().equals(buttons[3].getText()) && buttons[0].getText().equals(buttons[6].getText())) {
-            winner = buttons[0].getText();
-            highlightButtons(0, 3, 6);
-        } else if (!buttons[1].getText().isEmpty() && buttons[1].getText().equals(buttons[4].getText()) && buttons[1].getText().equals(buttons[7].getText())) {
-            winner = buttons[1].getText();
-            highlightButtons(1, 4, 7);
-        } else if (!buttons[2].getText().isEmpty() && buttons[2].getText().equals(buttons[5].getText()) && buttons[2].getText().equals(buttons[8].getText())) {
-            winner = buttons[2].getText();
-            highlightButtons(2, 5, 8);
+        if (!buttonA.getText().isEmpty()
+            && buttonA.getText().equals(buttonB.getText())
+            && buttonA.getText().equals(buttonC.getText())) {
+
+            winner = buttonA.getText();
+            buttonA.setForeground(Color.RED);
+            buttonB.setForeground(Color.RED);
+            buttonC.setForeground(Color.RED);
+
+        } else if (!buttonD.getText().isEmpty()
+            && buttonD.getText().equals(buttonE.getText())
+            && buttonD.getText().equals(buttonF.getText())) {
+
+            winner = buttonD.getText();
+            buttonD.setForeground(Color.RED);
+            buttonE.setForeground(Color.RED);
+            buttonF.setForeground(Color.RED);
+
+        } else if (!buttonG.getText().isEmpty()
+            && buttonG.getText().equals(buttonH.getText())
+            && buttonG.getText().equals(buttonI.getText())) {
+
+            winner = buttonG.getText();
+            buttonG.setForeground(Color.RED);
+            buttonH.setForeground(Color.RED);
+            buttonI.setForeground(Color.RED);
+
+        } else if (!buttonA.getText().isEmpty()
+            && buttonA.getText().equals(buttonD.getText())
+            && buttonA.getText().equals(buttonG.getText())) {
+
+            winner = buttonA.getText();
+            buttonA.setForeground(Color.RED);
+            buttonD.setForeground(Color.RED);
+            buttonG.setForeground(Color.RED);
+
+        } else if (!buttonB.getText().isEmpty()
+            && buttonB.getText().equals(buttonE.getText())
+            && buttonB.getText().equals(buttonH.getText())) {
+
+            winner = buttonB.getText();
+            buttonB.setForeground(Color.RED);
+            buttonE.setForeground(Color.RED);
+            buttonH.setForeground(Color.RED);
+
+        } else if (!buttonC.getText().isEmpty()
+            && buttonC.getText().equals(buttonF.getText())
+            && buttonC.getText().equals(buttonI.getText())) {
+
+            winner = buttonC.getText();
+            buttonC.setForeground(Color.RED);
+            buttonF.setForeground(Color.RED);
+            buttonI.setForeground(Color.RED);
+
+        } else if (!buttonA.getText().isEmpty()
+            && buttonA.getText().equals(buttonE.getText())
+            && buttonA.getText().equals(buttonI.getText())) {
+
+            winner = buttonA.getText();
+            buttonA.setForeground(Color.RED);
+            buttonE.setForeground(Color.RED);
+            buttonI.setForeground(Color.RED);
+
+        } else if (!buttonC.getText().isEmpty()
+            && buttonC.getText().equals(buttonE.getText())
+            && buttonC.getText().equals(buttonG.getText())) {
+
+            winner = buttonC.getText();
+            buttonC.setForeground(Color.RED);
+            buttonE.setForeground(Color.RED);
+            buttonG.setForeground(Color.RED);
         }
 
-        // Diagonals check
-        else if (!buttons[0].getText().isEmpty() && buttons[0].getText().equals(buttons[4].getText()) && buttons[0].getText().equals(buttons[8].getText())) {
-            winner = buttons[0].getText();
-            highlightButtons(0, 4, 8);
-        } else if (!buttons[2].getText().isEmpty() && buttons[2].getText().equals(buttons[4].getText()) && buttons[2].getText().equals(buttons[6].getText())) {
-            winner = buttons[2].getText();
-            highlightButtons(2, 4, 6);
-        }
-
-        if (!winner.isEmpty()) {
-            gameOver = true;
-            JOptionPane.showMessageDialog(this, "Winner is: " + winner);
-        }
-    }
-
-    private void highlightButtons(int i1, int i2, int i3) {
-        buttons[i1].setForeground(Color.RED);
-        buttons[i2].setForeground(Color.RED);
-        buttons[i3].setForeground(Color.RED);
+        gameOver = !winner.isEmpty();
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new HelloGridLayout());
+        javax.swing.SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                HelloGridLayout h = new HelloGridLayout();
+                h.setVisible(true);
+            }
+        });
     }
 }
