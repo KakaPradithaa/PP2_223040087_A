@@ -19,8 +19,6 @@ public class JTableAddRemoveRowExample {
     DefaultTableModel model = new DefaultTableModel(columnNames, 0); // Modeldengan 0 baris awal
     JTable table = new JTable(model);
 
-
-
     // Tombol untuk menambahkan baris
     JButton addButton = new JButton("Add Row");
     addButton.setBounds(50, 220, 100, 30);
