@@ -16,10 +16,19 @@ import java.sql.Statement;
 import java.sql.ResultSet;
 import java.util.List;
 import java.util.ArrayList;
+import org.apache.ibatis.session.SqlSessionFactory;
 import pertemuan7.Membership.src.db.MySqlConnection;
 import pertemuan7.Membership.src.model.JenisMember;
 
 public class JenisMemberDao {
+
+    public JenisMemberDao(SqlSessionFactory sqlSessionFactory) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public JenisMemberDao() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 
     public int insert(JenisMember jenisMember) {
         int result = -1;
@@ -78,5 +87,9 @@ public class JenisMemberDao {
             e.printStackTrace();
         }
         return list;
+    }
+
+    public List<JenisMember> findA11() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

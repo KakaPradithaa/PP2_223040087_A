@@ -1,4 +1,4 @@
-package pertemuan6.src.view.main;
+package pertemuan7.PendaftaranSd.src.view.main;
 
 import java.sql.SQLException;
 import java.util.logging.Level;

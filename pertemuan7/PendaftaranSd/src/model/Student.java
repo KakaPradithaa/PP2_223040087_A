@@ -1,4 +1,4 @@
-package pertemuan6.src.model;
+package pertemuan7.PendaftaranSd.src.model;
 
 public class Student {
     private int id;

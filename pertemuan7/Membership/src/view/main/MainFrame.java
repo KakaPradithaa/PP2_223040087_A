@@ -49,6 +49,10 @@ public class MainFrame extends JFrame {
         this.add(buttonMember);
     }
 
+    public MainFrame(JenisMemberDao jenisMemberDao, MemberDao memberDao) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     public JButton getButtonJenisMember() {
         return buttonJenisMember;
     }

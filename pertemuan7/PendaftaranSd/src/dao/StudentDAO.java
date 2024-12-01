@@ -1,4 +1,4 @@
-package pertemuan6.src.dao;
+package pertemuan7.PendaftaranSd.src.dao;
 
 import pertemuan6.src.db.MySqlConnection;
 import pertemuan6.src.model.Student;

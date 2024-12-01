@@ -1,4 +1,4 @@
-package pertemuan6.src.db;
+package pertemuan7.PendaftaranSd.src.db;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
