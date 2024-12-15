@@ -1,4 +1,4 @@
-package pertemuan6.src.view.form;
+package pertemuan7.PendaftaranSd.src.view.form;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
