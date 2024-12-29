@@ -3,6 +3,7 @@ package view;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
+import pertemuan13.MainFrame.src.controller.UserController;
 
 public class UserView extends JFrame {
     private JTextField txtName = new JTextField(20);
@@ -69,5 +70,13 @@ public class UserView extends JFrame {
     // Listener untuk tombol Export
     public void addExportListener(ActionListener listener) {
         btnExport.addActionListener(listener);
+    }
+
+    public void setProgressBarValue(int latestProgress) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public void addStartProcessListener(UserController.StartProcessListener startProcessListener) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
